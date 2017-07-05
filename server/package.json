@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/src/server.js",
+  "author": "",
+  "license": "Andreas Kaufmann",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pg": "^6.4.0"
+  }
+}
