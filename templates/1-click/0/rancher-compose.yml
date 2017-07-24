@@ -1,0 +1,16 @@
+.catalog:
+  name: "1-click"
+  version: "1.0"
+  description: "Multiplayer shooting game"
+  uuid: 1-click-0
+  questions:
+    - variable: "PASSWORD"
+      label: "Password"
+      description: "Administration password for the server"
+      default: password
+      required: true
+      type: "password"
+server:
+  scale: 1
+client:
+  scale: 1
