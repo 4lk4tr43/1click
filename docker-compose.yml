@@ -1,14 +1,11 @@
-version: '3'
+version: '2'
 
 services:
 
   server:
-    build:
-      context: ./server
-      dockerfile: Dockerfile
-    image: oneclick:latest
+    image: webalyse/1click
     ports:
-      - "8080:80"
+      - "11000:80"
     depends_on:
       - postgres
 
@@ -18,9 +15,9 @@ services:
       POSTGRES_USER: oneclick
       POSTGRES_PASSWORD: oneclick
     ports:
-      - "5432:5432"
+      - "11001:5432"
     volumes:
-      - oneclick-postgres:/var/lib/postgresql/data
+      - 1click-postgres:/var/lib/postgresql/data
 
 volumes:
-  oneclick-postgres:
+  1click-postgres:

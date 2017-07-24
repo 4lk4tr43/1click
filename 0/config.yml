@@ -1,0 +1,7 @@
+name: 1-click
+description: Management gui for 1-click campaigns
+version: 1.0
+category: swisscom
+maintainer: Andreas Kaufmann
+license: Andreas Kaufmann
+projectURL: https://hub.webalyse.ch/swisscom/1click
