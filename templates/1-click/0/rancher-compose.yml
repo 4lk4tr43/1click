@@ -2,7 +2,7 @@
   name: "1-click"
   version: "1.0"
   description: "Multiplayer shooting game"
-  uuid: 1-click-0
+  uuid: 1-click-3
   questions:
     - variable: "PASSWORD"
       label: "Password"
