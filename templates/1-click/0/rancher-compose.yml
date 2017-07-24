@@ -1,16 +1,35 @@
 .catalog:
   name: "1-click"
   version: "1.0"
-  description: "Multiplayer shooting game"
-  uuid: 1-click-3
+  description: "Swisscom 1-click personalization tool."
+  uuid: 1-click-0
   questions:
-    - variable: "PASSWORD"
-      label: "Password"
-      description: "Administration password for the server"
-      default: password
+    - variable: "server_host_port"
+      label: "Server port"
+      description: "Exposes the server to the port on the host."
       required: true
-      type: "password"
+      default: 80
+      type: int
+    - variable: "postgres_host_port"
+      label: "Postgres port"
+      description: "Exposes the postgres database to the port on the host."
+      required: true
+      default: 5432
+      type: int
+    - variable: "postgres_user"
+      label: "Postgres user"
+      description: "Exposes the postgres database to the port on the host."
+      required: true
+      default: "postgress_user"
+      type: string
+    - variable: "postgres_password"
+      label: "Postgres password"
+      description: "Exposes the postgres database to the port on the host."
+      required: true
+      default: "postgress_password"
+      type: password
+
 server:
   scale: 1
-client:
+postgres:
   scale: 1

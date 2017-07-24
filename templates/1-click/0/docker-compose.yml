@@ -3,9 +3,14 @@ version: '2'
 services:
 
   server:
+    build:
+      context: ../../../server
     image: webalyse/1click
+    environment:
+      - POSTGRES_USER=${postgres_user}
+      - POSTGRES_PASSWORD=${postgres_password}
     ports:
-      - "11000:80"
+      - ${server_host_port}:80
     depends_on:
       - postgres
 
@@ -15,7 +20,7 @@ services:
       POSTGRES_USER: oneclick
       POSTGRES_PASSWORD: oneclick
     ports:
-      - "11001:5432"
+      - ${postgres_host_port}:5432
     volumes:
       - 1click-postgres:/var/lib/postgresql/data
 
